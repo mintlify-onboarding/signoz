@@ -1,0 +1,67 @@
+---
+title: "Introduction"
+description: "SigNoz is an open-source observability tool that helps you monitor your applications and troubleshoot problems. It provides traces, metrics, and logs under a single pane of glass. It is available both as an [open-source software](https://github.com/SigNoz/signoz) and a [cloud offering](https://signoz.io/teams/)."
+---
+
+With SigNoz, you can do the following:
+
+* Visualise Traces, Metrics, and Logs in a single pane of glass
+* Monitor application metrics like p99 latency, error rates for your services, external API calls, and individual endpoints.
+* Find the root cause of the problem by going to the exact traces which are causing the problem and see detailed flamegraphs of individual request traces.
+* Run aggregates on trace data to get business-relevant metrics
+* Filter and query logs, build dashboards and alerts based on attributes in logs
+* Monitor infrastructure metrics such as CPU utilization or memory usage
+* Record exceptions automatically in Python, Java, Ruby, and Javascript
+* Easy to set alerts with DIY query builder
+
+## Get Started[](#get-started "Direct link to Get Started")
+
+You can either self-host SigNoz or try SigNoz Cloud. Once SigNoz is up and running, you can instrument your application to send data to SigNoz.
+
+<CardGroup cols={2}>
+    <Card title="SigNoz Cloud" icon="cloud-arrow-up" href="/docs/cloud" iconType="duotone">
+        Easy way to get started with SigNoz
+    </Card>
+    <Card title="Self-host SigNoz" icon="server" href="/docs/install" iconType="duotone">
+        Learn how to install and self-host SigNoz
+    </Card>
+</CardGroup>
+
+## How Does SigNoz Work?[](#how-does-signoz-work "Direct link to How Does SigNoz Work?")
+
+SigNoz collects data using [OpenTelemetry](https://opentelemetry.io/), an open-source observability solution. OpenTelemetry is backed by Cloud Native Computing Foundation. The project aims to standardize how we instrument our applications for generating telemetry data(traces, metrics, and logs).
+
+ SigNoz supports all the frameworks and languages supported by OpenTelemetry. You can find the complete list of supported languages on the [instrumentation](https://opentelemetry.io/docs/instrumentation/) page of the OpenTelemetry documentation.
+
+Once you instrument your application with OpenTelemetry, you can send the data to SigNoz for storage, analysis, and visualization.
+
+### Architecture[](#architecture "Direct link to Architecture")
+
+<Frame>![acrhitecture-diagram-clickhouse](/images/architecture-signoz-clickhouse-0f1ac4045a71b0b44ddbb9d36de8e069.svg)SigNoz includes the following components:</Frame>
+
+<CardGroup cols={2}>
+    <Card title="OpenTelemetry Collector" icon="chart-scatter" icontype="duotone">
+        Collects telemetry data from your services and applications.
+    </Card>
+    <Card title="ClickHouse" icon="arrow-pointer" icontype="duotone">
+        An open-source, high performance columnar OLAP database management system.
+    </Card>
+        <Card title="Query Service" icon="clipboard-question" icontype="duotone">
+        The interface between the front-end and ClickHouse
+    </Card>
+        <Card title="Frontend" icon="computer-classic" icontype="duotone">
+        The user interface, built in ReactJS and TypeScript.
+    </Card>
+</CardGroup>
+
+To learn more about the architecture of SigNoz, see the [Architecture](/docs/architecture/) page.
+
+## Use SigNoz[](#use-signoz "Direct link to Use SigNoz")
+
+The topics in this section provide details on using SigNoz to monitor your application.
+
+[1\. InstrumentationLearn how to instrument your applications to send data to SigNoz](/docs/instrumentation/overview/)
+
+[2\. TutorialsTutorials about monitoring your applications and infrastructure](/docs/tutorials/)
+
+[3\. OperateThis section explains how to manage SigNoz](/docs/operate/)

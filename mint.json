@@ -1,0 +1,56 @@
+{
+    "name": "SigNoz",
+    "logo": {
+      "light": "/logo/light.png",
+      "dark": "/logo/dark.png"
+    },
+    "favicon": "/favicon.png",
+    "colors": {
+      "primary": "#F25733",
+      "light": "#FF7D5F",
+      "dark": "#F25733"
+    },
+    "modeToggle": {
+        "default": "dark"
+    },
+    "topbarCtaButton": {
+      "name": "SigNoz Cloud",
+      "url": "https://signoz.io/teams/"
+    },
+    "topbarLinks": [
+      {
+        "name": "Customer Stories",
+        "url": "https://signoz.io/case-study/"
+      }
+    ],
+    "anchors": [
+      {
+        "name": "Blog",
+        "icon": "newspaper",
+        "url": "https://signoz.io/blog/"
+      }
+    ],
+    "navigation": [
+      {
+        "group": "Getting Started with SigNoz",
+        "pages": ["introduction"]
+      },
+      {
+        "group": "Installation",
+        "pages": [
+            "installation/signoz-cloud",
+            "installation/docker-standalone",
+            "installation/docker-swarm"
+        ]
+      },
+      {
+        "group": "Alerts",
+        "pages": ["setting-alerts-in-signoz"]
+      }
+    ],
+    "footerSocials":
+      {
+          "twitter": "https://twitter.com/SigNozHQ",
+          "slack": "https://signoz.io/slack"
+      }
+  }
